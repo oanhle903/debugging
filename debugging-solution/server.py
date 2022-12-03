@@ -20,16 +20,15 @@ menu_items = [
 
 @app.route("/")
 def homepage():
-    """Display the homepage."""
 
     session["cart"] = {}
     session["order_total"] = 0
 
     return render_template(
-        "index.html", 
-        coffee_price=COFFEE_PRICE, 
-        tea_price=TEA_PRICE, 
-        menu_items=menu_items
+        "index.html",
+        coffee_price=COFFEE_PRICE,
+        tea_price=TEA_PRICE,
+        menu_items=menu_items,
     )
 
 

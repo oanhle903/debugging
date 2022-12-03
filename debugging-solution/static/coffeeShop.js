@@ -1,4 +1,3 @@
-
 "use strict";
 
 const addButtons = document.querySelectorAll(".add-to-order");
@@ -6,10 +5,10 @@ const cartTotalDiv = document.querySelector("#cart-total");
 
 for (const button of addButtons) {
     button.addEventListener('click', () => {
-      const itemm = button.id;
+      const item = button.id;
       let cart = {};
       let orderTotal = 0;
-      fetch(`/update-cart.json?item=${itemm}`)
+      fetch(`/update-cart.json?item=${item}`)
         .then(response => response.json())
         .then(result => {
             cart = result.cart;
